@@ -66,7 +66,9 @@ def draw_circle(c, radius, shape=None):
     """
     if shape is None:
         return _draw_circle(c, radius, shape)
-    return _cached_circle(float(c[0]), float(c[1]), float(radius), tuple(int(d) for d in shape))
+    return _cached_circle(
+        float(c[0]), float(c[1]), float(radius), tuple(int(d) for d in shape)
+    )
 
 
 class MapAnalyzerPather:
